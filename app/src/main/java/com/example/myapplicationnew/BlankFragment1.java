@@ -25,14 +25,18 @@ public class BlankFragment1 extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_blankFragment1_to_blankFragment2);
+                Bundle bundle = new Bundle();
+                bundle.putString("key", "Из фрагмента 1");
+                Navigation.findNavController(view).navigate(R.id.action_blankFragment1_to_blankFragment2,bundle);
             }
         });
         Button button2 = view.findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_blankFragment1_to_blankFragment3);
+                Bundle bundle = new Bundle();
+                bundle.putString("key", "Из фрагмента 1");
+                Navigation.findNavController(view).navigate(R.id.action_blankFragment1_to_blankFragment3,bundle);
             }
         });
     }

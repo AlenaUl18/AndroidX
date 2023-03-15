@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class BlankFragment2 extends Fragment {
 
@@ -21,6 +22,8 @@ public class BlankFragment2 extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        Toast.makeText(getContext(), getArguments().getString("key"), Toast.LENGTH_SHORT).show();
 
         Button button = view.findViewById(R.id.button3);
         button.setOnClickListener(new View.OnClickListener() {
